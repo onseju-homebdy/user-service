@@ -1,7 +1,6 @@
 package com.onseju.userservice.account.service;
 
 import com.onseju.userservice.account.domain.Account;
-import com.onseju.userservice.account.repository.AccountRepositoryImpl;
 import com.onseju.userservice.account.service.dto.AccountAfterTradeParams;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -13,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Slf4j
 public class AccountService {
 
-	private final AccountRepositoryImpl accountRepository;
+	private final AccountRepository accountRepository;
 
 	@Transactional
 	public void updateAccountAfterTrade(final AccountAfterTradeParams accountAfterTradeParams) {
