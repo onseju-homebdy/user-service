@@ -71,7 +71,7 @@ public class GoogleOAuthService {
                 });
 
         // Step 4: Generate JWT token
-        String jwtToken = jwtUtil.createToken(user.getUsername());
+        String jwtToken = jwtUtil.createToken(user.getId(), user.getUsername());
         response.addHeader("Authorization",  jwtToken);
         return new LoginResponseDto(user.getId(),username, user.getMemberBalance());
     }
